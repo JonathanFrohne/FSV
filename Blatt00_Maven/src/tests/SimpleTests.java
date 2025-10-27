@@ -17,6 +17,7 @@ public class SimpleTests {
 		Assertions.assertThrows(AssertionFailedError.class, () -> Simple.max(null, 15, 1500));
 		Assertions.assertThrows(AssertionFailedError.class, () -> Simple.max(a, 3, 2));
 		Assertions.assertThrows(AssertionFailedError.class, () -> Simple.max(a, -10, 1500));
+		Assertions.assertThrows(AssertionFailedError.class, () -> Simple.max(a, 0, -5));
 	}
 
 	@Test
