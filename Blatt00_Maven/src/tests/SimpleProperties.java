@@ -14,6 +14,18 @@ public class SimpleProperties {
 		Assertions.assertTrue(Simple.abs(x) == x || Simple.abs(x) == -x);
 	}
 	
+    @Property
+    boolean absShouldBeEitherXorNegX(@ForAll int x) {
+        int result = Simple.abs(x);
+        return result == x || result == -x;
+    }
+
+    @Property
+    boolean absShouldBeNonNegative(@ForAll int x) {
+        int result = Simple.abs(x);
+        return result >= 0;
+    }
+	
 	
 	// 	Oracle
 	int fib(int x) {
